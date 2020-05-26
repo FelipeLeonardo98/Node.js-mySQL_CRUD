@@ -1,0 +1,18 @@
+Example of Routes
+
+/*
+app.get('/', function(req, res){
+    res.sendFile(__dirname + "/views/main.html");
+    //__dirname retorna o diretório absoluto
+}); */
+
+
+
+app.get('/about', function (req, res) {
+    res.send("Welcome!\n This page to talk about me!");
+})
+
+app.get('/hello/:nome/:cargo', function (req, res) {
+    res.send("<h1> Hello  " + req.params.nome + "</h1>" + "<h2> <i> Your profession is: " + req.params.cargo + "</i> </h2>");
+
+});
